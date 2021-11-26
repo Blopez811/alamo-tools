@@ -5,7 +5,7 @@ const CategoryList = () => {
     const categoryCategory = 'not sure what I need yet a la verga tilin';
 
     return (
-        <div>
+        <div class='home-text'>
             <h1>RENTAL EQUIPMENT</h1>
             <div>
             <h3>Select a category below to view rental equipment information or to reserve equipment for your jobsite.</h3>
