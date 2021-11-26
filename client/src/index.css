@@ -224,9 +224,10 @@ input:focus {
 }
 
 .hero-text {
-  color: white;
+  color: #F3A847;
   font-weight: bolder;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--primary);
 }
 
 .category-names {
@@ -236,6 +237,16 @@ input:focus {
 }
 
 .footer-style {
-  color: #dd9638;
+  color: #F3A847;
 
+}
+
+.home-banner-font {
+  font-weight: bolder;
+  font-size: 45px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.signup-login {
+  font-size: 25px;
 }

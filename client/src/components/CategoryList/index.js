@@ -9,7 +9,7 @@ const CategoryList = () => {
           <div class='home-text'>
             <h1 class='card-header'>RENTAL EQUIPMENT</h1>
             <div>
-            <h3 class='hero-text'>Select a category below to view rental equipment information or to reserve equipment for your jobsite.</h3>
+            <h3 class='hero-text card-body'>Select a category below to view rental equipment information, availability, and locations to reserve items for your jobsite. Instructions for pickup will follow.</h3>
             </div>
             <div class='row'>
             <Card style={{ width: '18rem' }}>
