@@ -2,7 +2,7 @@
   --primary: #232F3E;
   --secondary: #F3A847;
   --tertiary: #B12704;
-  --light: #fafafa;
+  --light: #F3A847;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -207,4 +207,10 @@ input:focus {
   .card {
     width: 100%;
   }
+}
+
+.card-header {
+  margin: 3px;
+  padding: 0.25rem 23rem;
+  border-radius: .5rem;
 }

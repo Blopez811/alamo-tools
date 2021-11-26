@@ -6,9 +6,10 @@ const CategoryList = () => {
 
     return (
         <div class='home-text'>
-            <h1>RENTAL EQUIPMENT</h1>
+            <h1 class='card-header'>RENTAL EQUIPMENT</h1>
             <div>
             <h3>Select a category below to view rental equipment information or to reserve equipment for your jobsite.</h3>
+            <div class='row'>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src='../../images/Lawn&Garden.png' />
                 <Card.Body>
@@ -44,6 +45,7 @@ const CategoryList = () => {
                     <Button variant="primary">Check Availability</Button>
                 </Card.Body>
             </Card>
+            </div>
             </div>
         </div>
     )
