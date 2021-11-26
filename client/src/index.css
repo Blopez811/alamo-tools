@@ -219,6 +219,7 @@ input:focus {
 
 .home-text {
  color:#F3A847;
+ font-weight: bold;
   
 }
 
@@ -226,4 +227,10 @@ input:focus {
   color: white;
   font-weight: bolder;
   font-family: 'Times New Roman', Times, serif;
+}
+
+.category-names {
+  font-weight: bolder;
+  font-size: larger;
+  color: #dd9638;
 }

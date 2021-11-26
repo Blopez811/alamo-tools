@@ -15,7 +15,7 @@ const CategoryList = () => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src='../../images/Lawn&Garden.png' />
                 <Card.Body>
-                    <Card.Title>Lawn & Garden</Card.Title>
+                    <Card.Title class='category-names'>Lawn & Garden</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
@@ -27,7 +27,7 @@ const CategoryList = () => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="../../images/Air Tools.png" />
                 <Card.Body>
-                    <Card.Title>Air Compressors & Tools</Card.Title>
+                    <Card.Title class='category-names'>Air Compressors & Tools</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
@@ -39,7 +39,7 @@ const CategoryList = () => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
                 <Card.Body>
-                    <Card.Title>Concrete & Masonry</Card.Title>
+                    <Card.Title class='category-names'>Concrete & Masonry</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
@@ -50,7 +50,7 @@ const CategoryList = () => {
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
                 <Card.Body>
-                    <Card.Title>Murder weapons</Card.Title>
+                    <Card.Title class='category-names'>Murder weapons</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
