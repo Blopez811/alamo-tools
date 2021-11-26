@@ -24,7 +24,7 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-4">
+          <li className="align-baseline">
             <Link to="/signup">
               Signup
             </Link>
