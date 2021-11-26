@@ -214,9 +214,16 @@ input:focus {
   padding: 0.25rem 23rem;
   border-radius: .5rem;
   background-color: var(--primary);
+  font-weight: bolder;
 }
 
 .home-text {
  color:#F3A847;
   
+}
+
+.hero-text {
+  color: white;
+  font-weight: bolder;
+  font-family: 'Times New Roman', Times, serif;
 }
