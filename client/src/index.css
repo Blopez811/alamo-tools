@@ -213,4 +213,10 @@ input:focus {
   margin: 3px;
   padding: 0.25rem 23rem;
   border-radius: .5rem;
+  background-color: var(--primary);
+}
+
+.home-text {
+ color:#F3A847;
+  
 }
