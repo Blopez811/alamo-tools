@@ -2,7 +2,7 @@
   --primary: #232F3E;
   --secondary: #F3A847;
   --tertiary: #B12704;
-  --light: #fafafa;
+  --light: #F3A847;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
@@ -36,8 +36,8 @@ h5,
 h6 {
   font-family: 'Rubik', sans-serif;
   font-weight: 500;
-  margin: 5px 0;
-  line-height: 1.25;
+  margin: 10px 0;
+  line-height: 2.00;
 }
 
 h1 {
@@ -207,4 +207,46 @@ input:focus {
   .card {
     width: 100%;
   }
+}
+
+.card-header {
+  margin: 3px;
+  padding: 0.25rem 23rem;
+  border-radius: .5rem;
+  background-color: var(--primary);
+  font-weight: bolder;
+}
+
+.home-text {
+ color:#F3A847;
+ font-weight: bold;
+  
+}
+
+.hero-text {
+  color: #F3A847;
+  font-weight: bolder;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: var(--primary);
+}
+
+.category-names {
+  font-weight: bolder;
+  font-size: larger;
+  color: #dd9638;
+}
+
+.footer-style {
+  color: #F3A847;
+
+}
+
+.home-banner-font {
+  font-weight: bolder;
+  font-size: 45px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.signup-login {
+  font-size: 25px;
 }
