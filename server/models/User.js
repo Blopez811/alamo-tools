@@ -1,20 +1,36 @@
-const mongoose = require('mongoose');
-const { Schema } = mongoose;
+const { Schema, model } = require("mongoose");
 const bcrypt = require('bcrypt');
 const Order = require('./Order.js');
 
 const userSchema = new Schema({
+  firstName: { type: String },
+  lastName: { type: String },
   email: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   password: {
     type: String,
     required: true,
     minlength: 8,
-    maxlength: 64
-  }
+    maxlength: 64,
+  },
+  orders: [
+    {
+      purchaseDate: { type: String },
+      tools: [
+        {
+          name: { type: String },
+          description: {type: String},
+          image: {type: String},
+          quantity: {type: Number},
+          price: {type: Number},
+          category: {name: {type: String}}
+        }
+      ],
+    },
+  ],
 });
 
 // store password prior to encryption
@@ -32,5 +48,6 @@ userSchema.methods.isCorrectPassword = async function(password) {
   return await bcrypt.compare(password, this.password);
 };
 
-const User = mongoose.model('User', userSchema);
+const User = model('User', userSchema);
+
 module.exports = User;

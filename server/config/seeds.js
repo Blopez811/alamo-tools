@@ -2,7 +2,7 @@ const db = require('./connection');
 const { User, Tool, Category } = require('../models');
 
 db.once('open', async () => {
-  // await Category.deleteMany();
+  await Category.deleteMany();
 
   const categories = await Category.insertMany([
     { name: 'Food' },
@@ -128,26 +128,52 @@ db.once('open', async () => {
 
   console.log('tools seeded');
 
-  // await User.deleteMany();
+  await User.deleteMany();
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
+  // await User.create({
+  //   firstName: 'Pamela',
+  //   lastName: 'Washington',
+  //   email: 'pamela@testmail.com',
+  //   password: 'password12345',
+  //   orders: [
+  //     {
+  //       tools: [tools[0]._id, tools[0]._id, tools[1]._id]
+  //     }
+  //   ]
+  // });
+
+  // await User.create({
+  //   firstName: 'Elijah',
+  //   lastName: 'Holt',
+  //   email: 'eholt@testmail.com',
+  //   password: 'password12345'
+  // });
+    const testUser = [
       {
-        tools: [tools[0]._id, tools[0]._id, tools[1]._id]
-      }
-    ]
-  });
-
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+        firstName: "Pamela",
+        lastName: "Washington",
+        email: "pamela@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          },
+        ],
+      },
+      {
+        firstName: "Elijah",
+        lastName: "Holt",
+        email: "eholt@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          }
+        ]
+      },
+    ];
+    
+    await User.collection.insertMany(testUser);
 
   console.log('users seeded');
 
