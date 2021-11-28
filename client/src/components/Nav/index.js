@@ -24,13 +24,13 @@ function Nav() {
     } else {
       return (
         <ul className="flex-row">
-          <li className="mx-1">
-            <Link to="/signup">
+          <li className="align-baseline">
+            <Link to="/signup" className='signup-login'>
               Signup
             </Link>
           </li>
-          <li className="mx-1">
-            <Link to="/login">
+          <li className="mx-4">
+            <Link to="/login" className='signup-login'>
               Login
             </Link>
           </li>
@@ -41,10 +41,10 @@ function Nav() {
 
   return (
     <header className="flex-row px-1">
-      <h1>
+      <h1 className='home-banner-font'>
         <Link to="/">
-          <span role="img" aria-label="shopping bag">🛍️</span>
-          -Shop-Shop
+          <span role="img" aria-label="shopping bag">🧰</span>
+          ALAMO TOOLS
         </Link>
       </h1>
 
