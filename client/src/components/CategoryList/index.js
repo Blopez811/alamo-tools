@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 
 const CategoryList = () => {
-    const categoryCategory = 'not sure what I need yet a la verga tilin';
+    const categoryCategory = 'not sure what I need yet';
 
     return (
         <div>
