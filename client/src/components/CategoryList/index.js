@@ -1,10 +1,13 @@
 import React from 'react';
 import { Card, Button } from 'react-bootstrap';
+import loginPage from '../../pages/Login';
+import { Link } from "react-router-dom";
 
 const CategoryList = () => {
     const categoryCategory = 'not sure what I need yet';
     const displayCategory = () => {
         console.log('displayCategory fired!');
+        // render(loginPage)
     }
 
     return (
@@ -23,7 +26,9 @@ const CategoryList = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
+                    <Link to={`/single-category`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
+                    </Link>
                 </Card.Body>
             </Card>
 
