@@ -237,6 +237,22 @@ input:focus {
   color: #dd9638;
 }
 
+.body-main {
+  background-image: url("../src/images/default-image-background.jpeg");
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-text {
+  text-align: right;
+  float: right
+}
+
+.footer-main {
+  margin-top: auto;
+}
+
 .footer-style {
   color: #F3A847;
 
@@ -250,4 +266,17 @@ input:focus {
 
 .signup-login {
   font-size: 25px;
+  float: right
+  
+}
+
+.nav-links {
+  float:right
+}
+
+.login-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
 }
