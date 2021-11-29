@@ -237,6 +237,17 @@ input:focus {
   color: #dd9638;
 }
 
+.body-main {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-main {
+  margin-top: auto;
+}
+
 .footer-style {
   color: #F3A847;
 
