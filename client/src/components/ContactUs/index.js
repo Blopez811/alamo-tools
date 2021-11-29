@@ -7,9 +7,10 @@ const ContactUs = () => {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      emailjs.sendForm('service_vjp0rwx', 'template_uyro45b', form.current, 'user_f3aRPOtGQhPgwmyQRUmAX')
         .then((result) => {
             console.log(result.text);
+            alert("Email successfully sent! A representative will be in contact with you shortly")
         }, (error) => {
             console.log(error.text);
         });
