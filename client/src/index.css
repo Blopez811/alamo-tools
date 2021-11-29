@@ -228,6 +228,7 @@ input:focus {
   font-weight: bolder;
   font-family: Georgia, 'Times New Roman', Times, serif;
   background-color: var(--primary);
+  border-radius: 200px;
 }
 
 .category-names {
