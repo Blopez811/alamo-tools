@@ -1,5 +1,5 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Tool, Category } = require('../models');
 
 db.once('open', async () => {
   await Category.deleteMany();
@@ -14,9 +14,9 @@ db.once('open', async () => {
 
   console.log('categories seeded');
 
-  await Product.deleteMany();
+  await Tool.deleteMany();
 
-  const products = await Product.insertMany([
+  const tools = await Tool.insertMany([
     {
       name: 'Tin of Cookies',
       description:
@@ -126,28 +126,54 @@ db.once('open', async () => {
     }
   ]);
 
-  console.log('products seeded');
+  console.log('tools seeded');
 
   await User.deleteMany();
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
-  });
+  // await User.create({
+  //   firstName: 'Pamela',
+  //   lastName: 'Washington',
+  //   email: 'pamela@testmail.com',
+  //   password: 'password12345',
+  //   orders: [
+  //     {
+  //       tools: [tools[0]._id, tools[0]._id, tools[1]._id]
+  //     }
+  //   ]
+  // });
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+  // await User.create({
+  //   firstName: 'Elijah',
+  //   lastName: 'Holt',
+  //   email: 'eholt@testmail.com',
+  //   password: 'password12345'
+  // });
+    const testUser = [
+      {
+        firstName: "Pamela",
+        lastName: "Washington",
+        email: "pamela@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          },
+        ],
+      },
+      {
+        firstName: "Elijah",
+        lastName: "Holt",
+        email: "eholt@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          }
+        ]
+      },
+    ];
+    
+    await User.collection.insertMany(testUser);
 
   console.log('users seeded');
 
