@@ -1,14 +1,16 @@
 import React from "react";
-import ProductList from "../components/ProductList";
-import CategoryMenu from "../components/CategoryMenu";
 import Cart from "../components/Cart";
+import CategoryList from '../components/CategoryList';
+import backgroundImage from '../images/default-image-background.jpeg';
+import ContactUs from '../components/ContactUs'
 
 const Home = () => {
   return (
+    <div style={{backgroundImage: `url(${backgroundImage})`}}>
     <div className="container">
-      <CategoryMenu />
-      <ProductList />
+      <CategoryList />
       <Cart />
+    </div>
     </div>
   );
 };

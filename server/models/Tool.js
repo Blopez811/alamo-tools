@@ -1,15 +1,15 @@
 const mongoose = require('mongoose');
-
 const { Schema } = mongoose;
 
-const productSchema = new Schema({
+const toolSchema = new Schema({
   name: {
     type: String,
     required: true,
     trim: true
   },
   description: {
-    type: String
+    type: String,
+    required: true
   },
   image: {
     type: String
@@ -17,10 +17,12 @@ const productSchema = new Schema({
   price: {
     type: Number,
     required: true,
-    min: 0.99
+    min: 0.95,
+    default: 49.95
   },
   quantity: {
     type: Number,
+    required: true,
     min: 0,
     default: 0
   },
@@ -31,6 +33,5 @@ const productSchema = new Schema({
   }
 });
 
-const Product = mongoose.model('Product', productSchema);
-
-module.exports = Product;
+const Tool = mongoose.model('Tool', toolSchema);
+module.exports = Tool;

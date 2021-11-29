@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { useMutation } from '@apollo/react-hooks';
 import Auth from "../utils/auth";
 import { ADD_USER } from "../utils/mutations";
+import { Card, Button } from 'react-bootstrap';
+// import backgroundImage from '../images/default-image-background.jpeg';
 
 function Signup(props) {
   const [formState, setFormState] = useState({ email: '', password: '' });
@@ -29,7 +31,11 @@ function Signup(props) {
   };
 
   return (
+    // <div style={{backgroundImage: `url(${backgroundImage})`}}>  background moved to html
+    <div class="login-card">
+    <Card style={{ width: '18rem' }}>
     <div className="container my-1">
+    
       <Link to="/login">
         ← Go to Login
       </Link>
@@ -83,6 +89,8 @@ function Signup(props) {
         </div>
       </form>
     </div>
+    </Card>
+   </div>
   );
 
 }
