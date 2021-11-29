@@ -238,11 +238,12 @@ input:focus {
 }
 
 .body-main {
+  background-image: url("../src/images/default-image-background.jpeg");
   min-height: 100vh;
-
   display: flex;
   flex-direction: column;
 }
+
 
 .footer-main {
   margin-top: auto;

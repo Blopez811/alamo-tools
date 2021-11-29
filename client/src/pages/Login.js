@@ -29,7 +29,7 @@ function Login(props) {
   };
 
   return (
-    <div style={{backgroundImage: `url(${backgroundImage})`}}>
+    // <div style={{backgroundImage: `url(${backgroundImage})`}}> background moved to html
     <div className="container my-1">
       <Link to="/signup">
         ← Go to Signup
@@ -69,7 +69,7 @@ function Login(props) {
         </div>
       </form>
     </div>
-    </div>
+    // </div>
   );
 }
 
