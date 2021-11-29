@@ -48,7 +48,7 @@
   <div class="container p-4 pb-0">
     <!-- Section: Form -->
     <section class="">
-      <form action="">
+      <form action="mailto:benicio.lopez@gmail.com" method="post" enctype="text/plain">
         <!--Grid row-->
         <div class="row d-flex justify-content-center">
           <!--Grid column-->
@@ -66,13 +66,14 @@
               <input type="email" id="form5Example29" class="form-control" />
               <label class="form-label footer-style" for="form5Example29">Email address</label>
             </div>
+
           </div>
           <!--Grid column-->
 
           <!--Grid column-->
           <div class="col-auto">
             <!-- Submit button -->
-            <button type="submit" class="btn btn-outline-light mb-4 footer-style">
+            <button type="submit" onClick="emailFunction()" class="btn btn-outline-light mb-4 footer-style">
               Contact Us
             </button>
           </div>
@@ -92,5 +93,10 @@
   </div>
   <!-- Copyright -->
 </footer>
+<script> 
+  function emailFunction() {
+    alert("Fill out and send the following email form and a representative will be in contact with you shortly")
+  }
+</script>
 
 </html>
