@@ -244,6 +244,10 @@ input:focus {
   flex-direction: column;
 }
 
+.nav-text {
+  text-align: right;
+  float: right
+}
 
 .footer-main {
   margin-top: auto;
@@ -262,4 +266,16 @@ input:focus {
 
 .signup-login {
   font-size: 25px;
+  float: right
+  
+}
+
+.nav-links {
+  float:right
+}
+
+.login-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
