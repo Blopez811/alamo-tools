@@ -40,7 +40,7 @@ function App() {
               <Route exact path="/success" component={Success} />
               <Route exact path="/orderHistory" component={OrderHistory} />
               <Route exact path="/products/:id" component={Detail} />
-              <Route exact path="/single-category" component={CategoryDetails} />
+              <Route exact path="/single-category/:id" component={CategoryDetails} />
               <Route component={NoMatch} />
             </Switch>
           </StoreProvider>

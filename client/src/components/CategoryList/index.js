@@ -28,7 +28,7 @@ const CategoryList = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category/`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263dc`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
@@ -42,7 +42,7 @@ const CategoryList = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263dd`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
@@ -56,7 +56,7 @@ const CategoryList = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263de`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
