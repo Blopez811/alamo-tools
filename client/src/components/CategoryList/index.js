@@ -62,14 +62,13 @@ const CategoryList = () => {
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Lawn&Garden.png" />
+                <Card.Img variant="top" src="../../images/10.png" />
                 <Card.Body>
-                    <Card.Title class='category-names'>MURDER WEAPONS</Card.Title>
+                    <Card.Title class='category-names'>PUMPS</Card.Title>
                     <Card.Text>
-                        Here you'll find rope, duct-tape, gloves, knives, and all the accoutrements of the 
-                        Dark Arts
+                        Pumps and accessories for home and commercial applications.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263df`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
