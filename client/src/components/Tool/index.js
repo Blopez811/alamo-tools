@@ -13,7 +13,7 @@ function Tool(item) {
 
       return (
         <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src='../../images/Lawn&Garden.png' />
+                <Card.Img variant="top" src={`../../images/${image}`}/>
                 <Card.Body>
                     <Card.Title class='category-names'>{name}</Card.Title>
                     <Card.Text>
