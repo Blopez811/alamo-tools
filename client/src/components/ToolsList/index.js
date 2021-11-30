@@ -10,12 +10,19 @@ import { QUERY_TOOLS_BY_CATEGORY } from '../../utils/queries';
 const ToolsList = () => {
   const [state, dispatch] = useStoreContext();
 
-  const { currentCategory } = state;
+  // const { currentCategory } = state;
+  let category = "61a57a32ec2d3775db3263dc";
+  // button function needs to give category id as prop
+  const { loading, error, data } = useQuery(QUERY_TOOLS_BY_CATEGORY, {variables:{category}});
 
-  const { loading, data } = useQuery(QUERY_TOOLS_BY_CATEGORY);
+  if (loading) return 'Loading...';
+  if (error) return `Error! ${error.message}`;
+  
 
   if(!loading) {
+    console.log("this is the start of query")
     console.log(data)
+    console.log('this is the end')
   }
 
 
