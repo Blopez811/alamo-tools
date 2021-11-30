@@ -42,6 +42,7 @@ const typeDefs = gql`
   type Query {
     categories: [Category]
     tools: [Tool]
+    toolsByCategory(category: ID): [Tool]
     tool(_id: ID!): Tool
     me: User
     user(username: String!): User
