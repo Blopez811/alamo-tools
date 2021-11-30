@@ -2,6 +2,8 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import loginPage from '../../pages/Login';
 import { Link } from "react-router-dom";
+import airTools from '../../images/Air Tools.png'
+import concreteTools from '../../images/Concrete & Masonry.png'
 
 const CategoryList = () => {
     const categoryCategory = 'not sure what I need yet';
@@ -33,7 +35,7 @@ const CategoryList = () => {
             </Card>
 
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Air Tools.png" />
+                <Card.Img variant="top" src= { airTools } />
                 <Card.Body>
                     <Card.Title class='category-names'>AIR COMPRESSORS & TOOLS</Card.Title>
                     <Card.Text>
@@ -47,7 +49,7 @@ const CategoryList = () => {
             </Card>
 
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
+                <Card.Img variant="top" src= { concreteTools } />
                 <Card.Body>
                     <Card.Title class='category-names'>CONCRETE & MASONRY</Card.Title>
                     <Card.Text>
@@ -60,7 +62,7 @@ const CategoryList = () => {
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
+                <Card.Img variant="top" src="../../images/Lawn&Garden.png" />
                 <Card.Body>
                     <Card.Title class='category-names'>MURDER WEAPONS</Card.Title>
                     <Card.Text>
