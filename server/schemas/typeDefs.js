@@ -41,7 +41,7 @@ const typeDefs = gql`
 
   type Query {
     categories: [Category]
-    tools(category: ID, name: String): [Tool]
+    tools: [Tool]
     tool(_id: ID!): Tool
     me: User
     user(username: String!): User
@@ -51,6 +51,15 @@ const typeDefs = gql`
   }
 
   type Mutation {
+    addTool(
+      name: String!
+      description: String!
+      image: String!
+      quantity: Int!
+      price: Int!
+      category: String!
+    ): Tool
+
     addUser(
       firstName: String!
       lastName: String!

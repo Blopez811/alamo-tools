@@ -35,7 +35,7 @@ const resolvers = {
       return await Tool.find(params).populate("category");
     },
     tools: async (parent, { _id }) => {
-      return await Tool.findById(_id).populate("category");
+      return await Tool.find();
     },
     user: async (parent, args, context) => {
       console.log(user);
@@ -102,6 +102,11 @@ const resolvers = {
     },
   },
   Mutation: {
+    addTool: async (parent, args) => {
+      const tool = await Tool.create(args);
+      return  tool ;
+    }, 
+
     addUser: async (parent, args) => {
       const user = await User.create(args);
       const token = signToken(user);
