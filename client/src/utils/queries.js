@@ -1,6 +1,6 @@
 import gql from 'graphql-tag';
 
-export const QUERY_TOOLS = gql`
+export const QUERY_PRODUCTS = gql`
   query getTools($category: ID) {
     tools(category: $category) {
       _id
@@ -39,6 +39,22 @@ export const QUERY_ALL_tools = gql`
   }
 `;
 
+export const QUERY_TOOLS_BY_CATEGORY = gql`
+query ToolsByCategory($category: ID) {
+  toolsByCategory(category: $category) {
+    _id
+    name
+    description
+    image
+    quantity
+    price
+    category {
+      _id
+    }
+  }
+}
+`
+
 export const QUERY_CATEGORIES = gql`
 {
   categories {
@@ -68,3 +84,4 @@ export const QUERY_USER = gql`
   }
 }
 `;
+
