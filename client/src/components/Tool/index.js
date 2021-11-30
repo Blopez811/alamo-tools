@@ -7,16 +7,17 @@ function Tool(item) {
         name,
         _id,
         price,
-        quantity
+        quantity,
+        description
       } = item;
 
       return (
         <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src='../../images/Lawn&Garden.png' />
                 <Card.Body>
-                    <Card.Title class='category-names'>Name of Tool</Card.Title>
+                    <Card.Title class='category-names'>{name}</Card.Title>
                     <Card.Text>
-                        Price <br/> Quantity
+                        {description} <br/> Price: {price} <br/> Quantity: {quantity}
                     </Card.Text>
                     <Button variant="primary">Add to Cart</Button>
                 </Card.Body>

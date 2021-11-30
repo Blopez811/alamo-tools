@@ -24,7 +24,7 @@ export const QUERY_CHECKOUT = gql`
   }
 `;
 
-export const QUERY_ALL_tools = gql`
+export const QUERY_ALL_TOOLS = gql`
   {
     tools {
       _id
@@ -34,6 +34,7 @@ export const QUERY_ALL_tools = gql`
       quantity
       category {
         name
+        _id
       }
     }
   }
