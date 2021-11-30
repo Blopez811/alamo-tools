@@ -57,6 +57,7 @@ const ToolsList = () => {
            _id= {tool._id}
             price={tool.price}
             quantity={tool.quantity}
+            description={tool.description}
           />
 
       ))}
