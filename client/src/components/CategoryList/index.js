@@ -4,6 +4,7 @@ import loginPage from '../../pages/Login';
 import { Link } from "react-router-dom";
 import airTools from '../../images/Air Tools.png'
 import concreteTools from '../../images/Concrete & Masonry.png'
+import pumpsPhoto from '../../images/10.png';
 
 const CategoryList = () => {
     const categoryCategory = 'not sure what I need yet';
@@ -62,7 +63,7 @@ const CategoryList = () => {
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/10.png" />
+                <Card.Img variant="top" src={ pumpsPhoto } />
                 <Card.Body>
                     <Card.Title class='category-names'>PUMPS</Card.Title>
                     <Card.Text>
