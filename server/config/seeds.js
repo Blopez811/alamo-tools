@@ -133,7 +133,7 @@ db.once('open', async () => {
       category: categories[3]._id,
       description:
         "Keep Your Systems Running At Their Prime testing pressured water systems with this Hydrostatic test electric pump.",
-      image: "c0701100.png",
+      image: "0701100.png",
       price: 40,
       quantity: 15,
     },

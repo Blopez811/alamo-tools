@@ -29,6 +29,7 @@ export const QUERY_ALL_TOOLS = gql`
     tools {
       _id
       name
+      image
       description
       price
       quantity
