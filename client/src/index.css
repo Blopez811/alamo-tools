@@ -262,6 +262,8 @@ input:focus {
   font-weight: bolder;
   font-size: 45px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
 }
 
 .signup-login {
@@ -271,7 +273,11 @@ input:focus {
 }
 
 .nav-links {
-  float:right
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
 }
 
 .login-card {
@@ -279,4 +285,10 @@ input:focus {
   align-items: center;
   justify-content: center;
   font-weight: bolder;
+}
+
+img-alamo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
