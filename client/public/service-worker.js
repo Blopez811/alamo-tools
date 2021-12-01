@@ -6,6 +6,12 @@ const FILES_TO_CACHE = [
   '/index.html',
   '/favicon.ico',
   '/manifest.json',
+  '/src/App.js',
+  '/src/index.css',
+  '/src/index.js',
+  '/src/pages/home.js',
+  '/src/components/CategoryList/index.js',
+  '/src/components/Cart/index.js'
   
 ];
 
