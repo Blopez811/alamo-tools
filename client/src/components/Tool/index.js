@@ -1,6 +1,8 @@
 import React from "react";
 import { Card, Button } from 'react-bootstrap';
 
+
+
 function Tool(item) {
     const {
         image,
@@ -10,10 +12,14 @@ function Tool(item) {
         quantity,
         description
       } = item;
+      console.log(name)
+      console.log(image)
+
+      
 
       return (
         <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`../../images/${image}`}/>
+                <Card.Img variant="top" src={`/images/${image}`}/>
                 <Card.Body>
                     <Card.Title class='category-names'>{name}</Card.Title>
                     <Card.Text>
