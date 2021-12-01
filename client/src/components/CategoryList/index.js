@@ -2,6 +2,9 @@ import React from 'react';
 import { Card, Button } from 'react-bootstrap';
 import loginPage from '../../pages/Login';
 import { Link } from "react-router-dom";
+import airTools from '../../images/Air Tools.png'
+import concreteTools from '../../images/Concrete & Masonry.png'
+import pumpsPhoto from '../../images/10.png';
 
 const CategoryList = () => {
     const categoryCategory = 'not sure what I need yet';
@@ -26,48 +29,47 @@ const CategoryList = () => {
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263dc`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
             </Card>
 
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Air Tools.png" />
+                <Card.Img variant="top" src= { airTools } />
                 <Card.Body>
                     <Card.Title class='category-names'>AIR COMPRESSORS & TOOLS</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263dd`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
             </Card>
 
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
+                <Card.Img variant="top" src= { concreteTools } />
                 <Card.Body>
                     <Card.Title class='category-names'>CONCRETE & MASONRY</Card.Title>
                     <Card.Text>
                         Some quick example text to build on the card title and make up the bulk of
                         the card's content.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263de`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
             </Card>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="../../images/Concrete & Masonry.png" />
+                <Card.Img variant="top" src={ pumpsPhoto } />
                 <Card.Body>
-                    <Card.Title class='category-names'>MURDER WEAPONS</Card.Title>
+                    <Card.Title class='category-names'>PUMPS</Card.Title>
                     <Card.Text>
-                        Here you'll find rope, duct-tape, gloves, knives, and all the accoutrements of the 
-                        Dark Arts
+                        Pumps and accessories for home and commercial applications.
                     </Card.Text>
-                    <Link to={`/single-category`}>
+                    <Link to={`/single-category/61a57a32ec2d3775db3263df`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>

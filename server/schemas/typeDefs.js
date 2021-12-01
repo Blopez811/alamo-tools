@@ -6,7 +6,7 @@ const typeDefs = gql`
     name: String
   }
 
-  type Product {
+  type Tool {
     _id: ID
     name: String
     description: String
@@ -19,7 +19,7 @@ const typeDefs = gql`
   type Order {
     _id: ID
     purchaseDate: String
-    products: [Product]
+    tools: [Tool]
   }
 
   type User {
@@ -35,24 +35,46 @@ const typeDefs = gql`
   }
 
   type Auth {
-    token: ID
+    token: ID!
     user: User
   }
 
   type Query {
     categories: [Category]
-    products(category: ID, name: String): [Product]
-    product(_id: ID!): Product
-    user: User
+    tools: [Tool]
+    toolsByCategory(category: ID): [Tool]
+    tool(_id: ID!): Tool
+    me: User
+    user(username: String!): User
+    users: [User]
     order(_id: ID!): Order
-    checkout(products: [ID]!): Checkout
+    checkout(tools: [ID]!): Checkout
   }
 
   type Mutation {
-    addUser(firstName: String!, lastName: String!, email: String!, password: String!): Auth
-    addOrder(products: [ID]!): Order
-    updateUser(firstName: String, lastName: String, email: String, password: String): User
-    updateProduct(_id: ID!, quantity: Int!): Product
+    addTool(
+      name: String!
+      description: String!
+      image: String!
+      quantity: Int!
+      price: Int!
+      category: String!
+    ): Tool
+
+    addUser(
+      firstName: String!
+      lastName: String!
+      email: String!
+      password: String!
+    ): Auth
+    addOrder(tools: [ID]!): Order
+    updateUser(
+      firstName: String
+      lastName: String
+      email: String
+      password: String
+    ): User
+    updateTool(_id: ID!, quantity: Int!): Tool
     login(email: String!, password: String!): Auth
   }
 `;

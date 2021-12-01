@@ -1,153 +1,220 @@
 const db = require('./connection');
-const { User, Product, Category } = require('../models');
+const { User, Tool, Category } = require('../models');
 
 db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Food' },
-    { name: 'Household Supplies' },
-    { name: 'Electronics' },
-    { name: 'Books' },
-    { name: 'Toys' }
+    { name: 'Lawn & Garden',
+      _id: '61a57a32ec2d3775db3263dc'
+  },
+    { name: 'Air Compressors & Tools',
+      _id: '61a57a32ec2d3775db3263dd'
+  },
+    { name: 'Concrete & Masonry',
+      _id: '61a57a32ec2d3775db3263de'
+  },
+    { name: 'Murder Weapons',
+      _id: '61a57a32ec2d3775db3263df'
+  },
   ]);
 
   console.log('categories seeded');
 
-  await Product.deleteMany();
+  await Tool.deleteMany();
 
-  const products = await Product.insertMany([
+  const tools = await Tool.insertMany([
     {
-      name: 'Tin of Cookies',
+      name: "CHAINSAW",
       description:
-        'Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.',
-      image: 'cookie-tin.jpg',
+        "Our gas chain saws offering the power and flexibility needed for cutting down trees, clearing brush and chopping logs.",
+      image: "0178200.png",
       category: categories[0]._id,
-      price: 2.99,
-      quantity: 500
+      price: 25,
+      quantity: 13,
     },
     {
-      name: 'Canned Coffee',
-      description:
-        'Praesent sed lacinia mauris. Nulla congue nibh magna, at feugiat nunc scelerisque quis. Donec iaculis rutrum vulputate. Suspendisse lectus sem, vulputate ac lectus sed, placerat consequat dui.',
-      image: 'canned-coffee.jpg',
+      name: "HEDGE TRIMMER",
+      description: "Our hedge trimmer is a garden power tool used to cut or trim plants in the garden or yard area.",
+      image: "0366700.png",
       category: categories[0]._id,
-      price: 1.99,
-      quantity: 500
+      price: 20,
+      quantity: 11,
     },
     {
-      name: 'Toilet Paper',
+      name: "POST DIGGER-ONE MAN, GAS OPERATED",
+      description: "Gas operated post digger, digs cylindrical wholes for posts of all kind.",
+      image: "0101300.png",
+      category: categories[0]._id,
+      price: 50,
+      quantity: 6,
+    },
+    {
+      name: "LAWN MOWER- HIGH WEED",
+      description: "Heavy duty Mower capable of large weeds, straw grass, high grass, large fields.",
+      image: "0365500.png",
+      category: categories[0]._id,
+      price: 50,
+      quantity: 5,
+    },
+
+    {
+      name: "AIR COMPRESSOR-6.5CFM PORTABLE ELECTRIC",
       category: categories[1]._id,
-      description:
-        'Donec volutpat erat erat, sit amet gravida justo sodales in. Phasellus tempus euismod urna. Proin ultrices nisi ut ipsum congue, vitae porttitor libero suscipit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam lacinia a nisi non congue.',
-      image: 'toilet-paper.jpg',
-      price: 7.99,
-      quantity: 20
+      description:"Ideal for smaller jobs, electric portable CMF 6.5",
+      image: "0030600.png",
+      price: 25,
+      quantity: 7,
     },
     {
-      name: 'Handmade Soap',
+      name: "SAND BLAST-3/4HP AMBIENT AIR PUMP W/HOS",
       category: categories[1]._id,
-      description:
-        'Praesent placerat, odio vel euismod venenatis, lectus arcu laoreet felis, et fringilla sapien turpis vestibulum nisl.',
-      image: 'soap.jpg',
-      price: 3.99,
-      quantity: 50
+      description: "Medium sized sandblaster, 3/4 horse power. Powerful enough for most non-commercial jobs.",
+      image: "0043800.png",
+      price: 30,
+      quantity: 5,
     },
     {
-      name: 'Set of Wooden Spoons',
+      name: "AIR TOOLS-HAMMER",
       category: categories[1]._id,
-      description:
-        'Vivamus ut turpis in purus pretium mollis. Donec turpis odio, semper vel interdum ut, vulputate at ex. Duis dignissim nisi vel tortor imperdiet finibus. Aenean aliquam sagittis rutrum.',
-      image: 'wooden-spoons.jpg',
-      price: 14.99,
-      quantity: 100
+      description: "Model T Air Hammer, extreme accuracy and mobility in one.",
+      image: "0041300.png",
+      price: 20,
+      quantity: 11,
+
     },
     {
-      name: 'Camera',
+      name: "AIR TOOLS-RIVET BUSTER 11 STROKE",
+      category: categories[1]._id,
+      description: "Quickly handle rivets with this 11 Stroke Air operated Rivet buster.",
+      image: "0042720.png",
+      price: 20,
+      quantity: 9,
+
+    },
+    {
+      name: "CONCRETE-1 YARD BUCKET",
+      category: categories[2]._id,
+      description:" Mixing concrete is typically hard work. Speed up your workflow and save your back with our top cement mixer.",
+      image: "0197500.png",
+      price: 30,
+      quantity: 4,
+    },
+    {
+      name: "CONCRETE-FLOOR GRINDER ELECTRIC",
       category: categories[2]._id,
       description:
-        'Vestibulum risus metus, luctus non tortor quis, tincidunt consectetur ex. Nullam vitae lobortis ligula, ut sagittis massa. Curabitur consectetur, tellus at pulvinar venenatis, erat augue cursus erat, eu ullamcorper eros lectus ultrices ipsum. Integer rutrum, augue vitae auctor venenatis, turpis turpis elementum orci, at sagittis risus mi a leo.',
-      image: 'camera.jpg',
-      price: 399.99,
-      quantity: 30
+        "Quickly prepare concrete pouring projects with our electric floor grinder.",
+      image: "0182000.png",
+      price: 45,
+      quantity: 15,
     },
     {
-      name: 'Tablet',
+      name: "FLOOR SANDER-17 ELECTRIC",
       category: categories[2]._id,
       description:
-        'In sodales, ipsum quis ultricies porttitor, tellus urna aliquam arcu, eget venenatis purus ligula ut nisi. Fusce ut felis dolor. Mauris justo ante, aliquet non tempus in, tempus ac lorem. Aliquam lacinia dolor eu sem eleifend ultrices. Etiam mattis metus metus. Sed ligula dui, placerat non turpis vitae, suscipit volutpat elit. Phasellus sagittis, diam elementum suscipit fringilla, libero mauris scelerisque ex, ac interdum diam erat non sapien.',
-      image: 'tablet.jpg',
-      price: 199.99,
-      quantity: 30
+        "Prepare floors for concrete or masonry projects with our electric floor sander.",
+      image: "0313400.png",
+      price: 40,
+      quantity: 12,
     },
     {
-      name: 'Tales at Bedtime',
+      name: "MIXER-CEMENT 9 CUBIC FOOT",
+      category: categories[2]._id,
+      description:
+        "Perfect for home projects, driveways, patios, 9 cubic foot cement mixer.",
+      image: "0230050.png",
+      price: 45,
+      quantity: 10,
+
+    },
+    {
+      name: "PUMP-HYDROSTATIC TEST ELECTRIC",
       category: categories[3]._id,
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ornare diam quis eleifend rutrum. Aliquam nulla est, volutpat non enim nec, pharetra gravida augue. Donec vitae dictum neque. Pellentesque arcu lorem, fringilla non ligula ac, tristique bibendum erat. Ut a semper nibh. Quisque a mi et mi tempor ultricies. Maecenas eu ipsum eu enim hendrerit accumsan at euismod urna.',
-      image: 'bedtime-book.jpg',
-      price: 9.99,
-      quantity: 100
+        "Keep Your Systems Running At Their Prime testing pressured water systems with this Hydrostatic test electric pump.",
+      image: "0701100.png",
+      price: 40,
+      quantity: 15,
     },
     {
-      name: 'Spinning Top',
-      category: categories[4]._id,
-      description: 'Ut vulputate hendrerit nibh, a placerat elit cursus interdum.',
-      image: 'spinning-top.jpg',
-      price: 1.99,
-      quantity: 1000
-    },
-    {
-      name: 'Set of Plastic Horses',
-      category: categories[4]._id,
+      name: "PUMP-CENTRIFUGAL 2 GAS WSUCT & 50' DIS",
+      category: categories[3]._id,
       description:
-        'Sed a mauris condimentum, elementum enim in, rhoncus dui. Phasellus lobortis leo odio, sit amet pharetra turpis porta quis.',
-      image: 'plastic-horses.jpg',
-      price: 2.99,
-      quantity: 1000
+        "If an electric operated pump is no feasible for your project, a gas alternative might suit your needs.",
+      image: "0702700.png",
+      price: 12.00,
+      quantity: 13,
     },
     {
-      name: 'Teddy Bear',
-      category: categories[4]._id,
+      name: "HOSE-1 1/2 X50' RUBBER DISCHARGE",
+      category: categories[3]._id,
       description:
-        'Vestibulum et erat finibus erat suscipit vulputate sed vitae dui. Ut laoreet tellus sit amet justo bibendum ultrices. Donec vitae felis vestibulum, congue augue eu, finibus turpis.',
-      image: 'teddy-bear.jpg',
-      price: 7.99,
-      quantity: 100
+        "50 feet of rubber house for attachments to you.",
+      image: "0702200.png",
+      price: 7,
+      quantity: 100,
     },
     {
-      name: 'Alphabet Blocks',
-      category: categories[4]._id,
+      name: "PUMP-TRASH 6 TOW DSL W/SUCT & 50' DISCH",
+      category: categories[3]._id,
       description:
-        'Morbi consectetur viverra urna, eu fringilla turpis faucibus sit amet. Suspendisse potenti. Donec at dui ac sapien eleifend hendrerit vel sit amet lectus.',
-      image: 'alphabet-blocks.jpg',
-      price: 9.99,
-      quantity: 600
+        "Pump out dirty water or flooded areas with this heavy duty towable trash Pump 50'",
+      image: "0707600.png",
+      price: 75,
+      quantity: 6,
+
     }
   ]);
 
-  console.log('products seeded');
+  console.log('tools seeded');
 
   await User.deleteMany();
 
-  await User.create({
-    firstName: 'Pamela',
-    lastName: 'Washington',
-    email: 'pamela@testmail.com',
-    password: 'password12345',
-    orders: [
-      {
-        products: [products[0]._id, products[0]._id, products[1]._id]
-      }
-    ]
-  });
+  // await User.create({
+  //   firstName: 'Pamela',
+  //   lastName: 'Washington',
+  //   email: 'pamela@testmail.com',
+  //   password: 'password12345',
+  //   orders: [
+  //     {
+  //       tools: [tools[0]._id, tools[0]._id, tools[1]._id]
+  //     }
+  //   ]
+  // });
 
-  await User.create({
-    firstName: 'Elijah',
-    lastName: 'Holt',
-    email: 'eholt@testmail.com',
-    password: 'password12345'
-  });
+  // await User.create({
+  //   firstName: 'Elijah',
+  //   lastName: 'Holt',
+  //   email: 'eholt@testmail.com',
+  //   password: 'password12345'
+  // });
+    const testUser = [
+      {
+        firstName: "Pamela",
+        lastName: "Washington",
+        email: "pamela@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          },
+        ],
+      },
+      {
+        firstName: "Elijah",
+        lastName: "Holt",
+        email: "eholt@testmail.com",
+        password: "password12345",
+        orders: [
+          {
+            tools: [tools[0]._id, tools[0]._id, tools[1]._id],
+          }
+        ]
+      },
+    ];
+    
+    await User.collection.insertMany(testUser);
 
   console.log('users seeded');
 
