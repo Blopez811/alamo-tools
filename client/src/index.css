@@ -98,6 +98,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+
 }
 
 button:hover {
@@ -221,11 +222,13 @@ input:focus {
   font-weight: bold;
   text-align: center;
   width: 100%;
+  
 }
 
 .home-text {
  color:#F3A847;
  font-weight: bold;
+ padding: 10px;
   
 }
 
@@ -235,6 +238,7 @@ input:focus {
   font-family: 'Rubik', 'Segoe UI', sans-serif;
   background-color: var(--primary);
   border-radius: 40px;
+
 }
 
 .category-names {
@@ -314,4 +318,8 @@ h3.hero-text.card-body {
 
 div.nav-links {
   vertical-align: text-bottom;
+}
+
+.hero-pad {
+  padding: 10px;
 }

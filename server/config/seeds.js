@@ -141,7 +141,7 @@ db.once('open', async () => {
       name: "PUMP-CENTRIFUGAL 2 GAS WSUCT & 50' DIS",
       category: categories[3]._id,
       description:
-        "If an electric operated pump is no feasible for your project, a gas alternative might suit your needs.",
+        "If an electric operated pump is not feasible for your project, a gas alternative might suit your needs.",
       image: "0702700.png",
       price: 12.00,
       quantity: 13,
