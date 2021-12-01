@@ -5,10 +5,18 @@ db.once('open', async () => {
   await Category.deleteMany();
 
   const categories = await Category.insertMany([
-    { name: 'Lawn & Garden' },
-    { name: 'Air Compressors & Tools' },
-    { name: 'Concrete & Masonry' },
-    { name: 'Murder Weapons' },
+    { name: 'Lawn & Garden',
+      _id: '61a57a32ec2d3775db3263dc'
+  },
+    { name: 'Air Compressors & Tools',
+      _id: '61a57a32ec2d3775db3263dd'
+  },
+    { name: 'Concrete & Masonry',
+      _id: '61a57a32ec2d3775db3263de'
+  },
+    { name: 'Murder Weapons',
+      _id: '61a57a32ec2d3775db3263df'
+  },
   ]);
 
   console.log('categories seeded');

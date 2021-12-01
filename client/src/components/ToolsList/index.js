@@ -38,8 +38,9 @@ const ToolsList = () => {
 
 
   function filterTools() {
-    
+    console.log(data)
     let filterArr = data.tools.filter(tool => tool.category._id == currentCategoryId.id);
+    console.log(filterArr)
     return filterArr
   }
 
