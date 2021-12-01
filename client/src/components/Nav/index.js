@@ -40,7 +40,7 @@ function Nav() {
   return (
     <header className="flex-row px-1">
       <Alamo/>
-      <h1 className="home-banner-font">
+      <h1 className="px-3 home-banner-font">
         <Link to="/">ALAMO TOOLS</Link>
       </h1>
 
