@@ -1,5 +1,7 @@
 import React from "react";
 import { Card, Button } from 'react-bootstrap';
+import { useStoreContext } from '../../utils/GlobalState';
+import { ADD_TO_CART, UPDATE_CART_QUANTITY } from '../../utils/actions';
 
 
 
@@ -11,24 +13,31 @@ function Tool(item) {
         price,
         quantity,
         description
-      } = item;
-      console.log(name)
-      console.log(image)
+    } = item;
 
-      
+    const [state, dispatch] = useStoreContext();
 
-      return (
+    const addToCart = () => {
+        dispatch({
+            type: ADD_TO_CART,
+            product: { ...item, purchaseQuantity: 1 }
+        });
+    };
+
+
+
+    return (
         <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={`/images/${image}`}/>
-                <Card.Body>
-                    <Card.Title class='category-names'>{name}</Card.Title>
-                    <Card.Text>
-                        {description} <br/> Price: {price} <br/> Quantity: {quantity}
-                    </Card.Text>
-                    <Button variant="primary">Add to Cart</Button>
-                </Card.Body>
-            </Card>
-      )
+            <Card.Img variant="top" src={`/images/${image}`} />
+            <Card.Body>
+                <Card.Title class='category-names'>{name}</Card.Title>
+                <Card.Text>
+                    {description} <br /> Price: {price} <br /> Quantity: {quantity}
+                </Card.Text>
+                <Button variant="primary" onClick={addToCart}>Add to Cart</Button>
+            </Card.Body>
+        </Card>
+    )
 };
 
 export default Tool;
