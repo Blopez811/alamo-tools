@@ -1,7 +1,7 @@
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
-  --tertiary: #B12704;
+  --tertiary: #232f3e;
   --light: #F3A847;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -34,7 +34,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Rubik', 'Segoe UI', sans-serif;
   font-weight: 500;
   margin: 10px 0;
   line-height: 2.00;
@@ -81,6 +81,7 @@ a:hover {
 
 header {
   background: var(--primary);
+  width: 100%;
 }
 
 header a {
@@ -97,6 +98,7 @@ button {
   cursor: pointer;
   margin: 0 1px;
   background-color: var(--secondary);
+
 }
 
 button:hover {
@@ -207,28 +209,36 @@ input:focus {
   .card {
     width: 100%;
   }
+
+  .card-header {
+    width: 100%;
+  }
 }
 
 .card-header {
-  margin: 3px;
-  padding: 0.25rem 23rem;
-  border-radius: .5rem;
+  margin: auto;
+  border-radius: 40px;
   background-color: var(--primary);
-  font-weight: bolder;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  
 }
 
 .home-text {
  color:#F3A847;
  font-weight: bold;
+ padding: 10px;
   
 }
 
 .hero-text {
   color: #F3A847;
   font-weight: bolder;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: 'Rubik', 'Segoe UI', sans-serif;
   background-color: var(--primary);
-  border-radius: 200px;
+  border-radius: 40px;
+
 }
 
 .category-names {
@@ -262,16 +272,23 @@ input:focus {
   font-weight: bolder;
   font-size: 45px;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
 }
 
 .signup-login {
   font-size: 25px;
-  float: right
+  float: right;
+  vertical-align: middle;
   
 }
 
 .nav-links {
-  float:right
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
 }
 
 .login-card {
@@ -279,4 +296,29 @@ input:focus {
   align-items: center;
   justify-content: center;
   font-weight: bolder;
+}
+
+@media screen and (max-width: 1015px) {
+  .hero-text {
+    font-size: 16px;
+  }
+  .card-header .row .card {
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+h3.hero-text.card-body {
+  margin: auto;
+  display: flex;
+  text-align: center;
+}
+
+div.nav-links {
+  vertical-align: text-bottom;
+}
+
+.hero-pad {
+  padding: 10px;
 }

@@ -17,7 +17,7 @@ const CategoryList = () => {
         <div>
           <div class='home-text'>
             <h1 class='card-header'>RENTAL EQUIPMENT</h1>
-            <div>
+            <div class='hero-pad'>
             <h3 class='hero-text card-body'>Select a category below to view rental equipment information, availability, and locations to reserve items for your jobsite. Instructions for pickup will follow.</h3>
             </div>
             <div class='row'>
@@ -26,8 +26,7 @@ const CategoryList = () => {
                 <Card.Body>
                     <Card.Title class='category-names'>LAWN & GARDEN</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                       Tools for maintenance of lawns, hedges, or brush. For Home or Commercial projects. Chainsaws, Mowers, Post Diggers and more.
                     </Card.Text>
                     <Link to={`/single-category/61a57a32ec2d3775db3263dc`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
@@ -37,16 +36,17 @@ const CategoryList = () => {
 
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src= { airTools } />
+                
                 <Card.Body>
                     <Card.Title class='category-names'>AIR COMPRESSORS & TOOLS</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                        Top of the line Air Compressors, Sand Blasters, Air Powered Rivet Busters, and Air Hammers for DIY or commercial. 
                     </Card.Text>
                     <Link to={`/single-category/61a57a32ec2d3775db3263dd`}>
                     <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
+                
             </Card>
 
             <Card style={{ width: '18rem' }}>
@@ -54,11 +54,10 @@ const CategoryList = () => {
                 <Card.Body>
                     <Card.Title class='category-names'>CONCRETE & MASONRY</Card.Title>
                     <Card.Text>
-                        Some quick example text to build on the card title and make up the bulk of
-                        the card's content.
+                     Home to Medium sized Commercial projects. Tools for prepping and pouring cement, along with masonry. 
                     </Card.Text>
                     <Link to={`/single-category/61a57a32ec2d3775db3263de`}>
-                    <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
+                    <Button variant="primary bottom" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
             </Card>
@@ -67,10 +66,10 @@ const CategoryList = () => {
                 <Card.Body>
                     <Card.Title class='category-names'>PUMPS</Card.Title>
                     <Card.Text>
-                        Pumps and accessories for home and commercial applications.
+                        Pumps and accessories for Home and Commercial applications. We offer Gas and Electric options, along with accessories and Test Pumps. 
                     </Card.Text>
                     <Link to={`/single-category/61a57a32ec2d3775db3263df`}>
-                    <Button variant="primary" onClick={displayCategory}>Check Availability</Button>
+                    <Button variant="primary bottom" onClick={displayCategory}>Check Availability</Button>
                     </Link>
                 </Card.Body>
             </Card>
