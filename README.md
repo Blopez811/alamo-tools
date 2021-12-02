@@ -9,6 +9,10 @@
 
   ## Description
    This a full stack ecommerce website for tool rentals.
+   
+   <img width="1478" alt="Screen Shot 2021-12-01 at 7 45 51 PM" src="https://user-images.githubusercontent.com/84877211/144342405-4ac45e1c-b94e-40d6-93ff-0314efd0d549.png">
+
+   
 
   ## Installation
     No installation necessary, just go to deployed website at https://polar-stream-33143.herokuapp.com/
