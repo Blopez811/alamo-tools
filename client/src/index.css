@@ -1,7 +1,7 @@
 :root {
   --primary: #232F3E;
   --secondary: #F3A847;
-  --tertiary: #B12704;
+  --tertiary: #232f3e;
   --light: #F3A847;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -269,10 +269,11 @@ input:focus {
 }
 
 .home-banner-font {
-  left: 10px;
-  font-weight: normal;
-  font-size: 42px;
-  font-family: 'Rubik', 'Segoe UI', sans-serif;
+  font-weight: bolder;
+  font-size: 45px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  display: flex;
+  align-items: center;
 }
 
 .signup-login {
@@ -283,13 +284,11 @@ input:focus {
 }
 
 .nav-links {
-  float: right;
-  vertical-align: middle;
-  margin: auto;
-}
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 
-.nav-links ul {
-  vertical-align: middle;
 }
 
 .login-card {
