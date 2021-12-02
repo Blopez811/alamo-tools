@@ -5,6 +5,7 @@
   * [Description](https://github.com/Blopez811/alamo-tools#description)
   * [Installation](https://github.com/Blopez811/alamo-tools#installation)
   * [Contributing](https://github.com/Blopez811/alamo-tools#contributing)
+  * [Technologies](https://github.com/Blopez811/alamo-tools#technologies)
   * [Questions](https://github.com/Blopez811/alamo-tools#questions)
 
   ## Description
@@ -19,6 +20,10 @@
 
   ## Contributing
     This application was a collaborative effort from Alex Cooney, Matt Luna, and Rio Costanzo, and Benicio Lopez
+    
+  ## Technologies
+    The technologies used for this application were as followed:
+    MongoDB, Express, React, Node.js, GraphQl, JSONwebtoken, Apollo, Heroku
 
 
   ## Questions
